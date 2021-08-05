@@ -1,12 +1,11 @@
 import { load_homepage } from './modules/homepage.js';
+import { load_tests } from './modules/tests.js';
 
-// const homepage = load_homepage();
-const contact = '<h1>contact</h1>';
 
 const routes = {
     '/build/' : load_homepage(),
     '/' : load_homepage(),
-    '/contact' : contact,
+    '/build/tests/' : load_tests(),
   };
 
 const rootDiv = document.getElementById('root');
@@ -23,5 +22,7 @@ const onNavigate = (pathname) => {
 window.onpopstate = () => {
     rootDiv.innerHTML = routes[window.location.pathname]
 }
-
+document.onload = () => {
+    rootDiv.innerHTML = routes[window.location.pathname]
+}
 window.onNavigate = onNavigate;
