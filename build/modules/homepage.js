@@ -1,3 +1,3 @@
-export function load_homepage() {
-    return '<object type="text/html" data="/build/pages/homepage.html" ></object>';
+export async function load_homepage() {
+    return fetch('/build/pages/homepage.html').then(data => data.text());
 };

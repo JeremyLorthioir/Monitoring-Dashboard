@@ -1,7 +1,6 @@
 import { load_homepage } from './modules/homepage.js';
 import { load_tests } from './modules/tests.js';
 
-
 const routes = {
     '/build/' : load_homepage(),
     '/' : load_homepage(),
@@ -16,7 +15,9 @@ const onNavigate = (pathname) => {
         pathname, 
         window.location.origin + pathname
     );
-    rootDiv.innerHTML = routes[pathname];
+
+    routes[pathname].then(result => rootDiv.innerHTML = result);
+    
 }
 
 window.onpopstate = () => {

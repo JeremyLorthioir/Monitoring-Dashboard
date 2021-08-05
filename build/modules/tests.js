@@ -1,3 +1,3 @@
-export function load_tests() {
-    return '<object type="text/html" data="/build/pages/tests.html" ></object>';
+export async function load_tests() {
+    return fetch('/build/pages/tests.html').then(data => data.text());
 };
