@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoring dashboard</title>
-</head>
-<body>
-    <h1 class="text-4xl ">Test talwind</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Monitoring dashboard</title>
+
+		<!-- CSS and javascript imports -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<ul>
+			<li href="#" onclick="onNavigate('/'); return false;">Homepage</li>
+			<li href="#" onclick="onNavigate('/contact'); return false;">Contact</li>
+		</ul>
+		<br />
+		<br />
+		<br />
+		<div id="root"></div>
+	</body>
+
+	<script src="router.js"></script>
 </html>
